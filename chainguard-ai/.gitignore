@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Local data and storage
+data/uploads/*
+data/generated/*
+!data/uploads/.gitkeep
+!data/generated/.gitkeep
+backend/storage/
+ml/artifacts/*.pkl
+
+# Env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright
+test-results/
+playwright-report/

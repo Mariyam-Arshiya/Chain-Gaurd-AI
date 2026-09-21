@@ -1,0 +1,17 @@
+services:
+  chainguard:
+    build: .
+    container_name: chainguard-ai
+    ports:
+      - "8000:8000"
+    environment:
+      - CG_HOST=0.0.0.0
+      - CG_PORT=8000
+      - CG_DEMO_MODE=1
+    volumes:
+      - cg-storage:/app/backend/storage
+      - ./data/uploads:/app/data/uploads
+    restart: unless-stopped
+
+volumes:
+  cg-storage:
